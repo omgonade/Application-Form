@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="first.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("personal.html"); 
+    });
+    </script> 
+    <title>Application Form</title>
+</head>
+<body>
+    <header class="hed1">
+        <!-- <span class="logo">
+            <img src="iitk.png" alt="logo" >
+        </span> -->
+        <h1>Application Form</h1>
+        <span id="current_date" class="date">
+            <script>
+                date=new Date();
+                year=date.getFullYear();
+                month=date.getMonth()+1;
+                day=date.getDate();
+                document.getElementById("current_date").innerHTML=day+"/"+month+"/"+year;
+            </script>
+        </span>
+    </header>
+    <section>
+    <div class="advno">
+    <form>
+        <label for="adv">Select Advt.No.</label><br>
+        <select name="adv" id="adv">
+            <option value="1/2021/52">1/2021/52</option>
+            <option value="1/2021/53">1/2021/53</option>
+        </select>
+    </form>
+    </div>
+    </section>
+    <div class="personal"><div class="hed2_1">
+        <h2>Personal Details:</h2>
+    </div>
+    <div class="content1">
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Name"><br>
+            <label for="fname">Father's Name: </label>
+            <input type="text" name="fname" id="fname" placeholder="Father's Name"><br>
+            <label for="dob">Date of birth: </label>
+            <input type="date" name="dob" id="dob"><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="male" value="male">            
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label><br>
+            <label for="marital">Marital status:</label>
+            <input type="radio" name="marital" id="married" value="married">
+            <label for="married">Married</label>
+            <input type="radio" name="marital" id="unmarried" value="unmarried">
+            <label for="unmarried">Unmarried</label><br>
+            <label for="nation">Nationality:</label>
+            <input type="text" name="nation" id="nation">
+        </form>
+    </div>
+    </div>
+    <div class="postal">
+       <div class="hed2_2"><h2> Postal Address</h2></div>
+       <h3 class="hed3_1">Present Address</h3>
+       <div class="content2">
+       <form action="">
+        <label for="address">Address:</label><br>
+        <textarea name="address" id="address" col="100" rows="4" placeholder="Address"></textarea><br>
+        <label for="district">District:</label> 
+        <input type="text" name="district" id="district" placeholder="District"><br>
+        <label for="state">State:</label> 
+        <input type="text" name="state" id="State" placeholder="State"><br>
+        <label for="Pincode">Pin Code:</label> 
+        <input type="text" name="Pincode" id="Pincode" placeholder="Pincode" inputmode="numeric" maxlength="6"/><br>
+        <label for="phone">Phone No.:</label>
+        <input type="tel" name="phone" id="phone" placeholder="Phone No."><br>
+        <label for="email">Email: </label>
+        <input type="email" name="Email" id="Email" placeholder="Email"/>
+       </form>       
+       </div>
+       <h3 class="hed3_2">Permanent Address</h3>
+       <div class="content3">
+        <form action="">
+         <label for="address">Address:</label><br>
+         <textarea name="address" id="address1" col="100" rows="4" placeholder="Address"></textarea><br>
+         <label for="district">District:</label> 
+         <input type="text" name="district" id="district1" placeholder="District"><br>
+         <label for="state">State:</label> 
+         <input type="text" name="state" id="State1" placeholder="State"><br>
+         <label for="Pincode">Pin Code:</label> 
+         <input type="text" name="Pincode" id="Pincode1" placeholder="Pincode" inputmode="numeric" maxlength="6"/><br>
+         <label for="phone">Phone No.:</label>
+         <input type="tel" name="phone" id="phone1" placeholder="Phone No."><br>
+         <label for="email">Email: </label>
+         <input type="email" name="Email" id="Email1" placeholder="Email"/>
+        </form>       
+        </div>        
+    </div>
+    <div class="content4">
+        <div class="hed2_3"><h2> Educational/Professional/Technical qualification</h2></div>
+        
+    </div>
+</body>
+</html>
